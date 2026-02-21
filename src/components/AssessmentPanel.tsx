@@ -1,7 +1,9 @@
 import { Home, GraduationCap, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const AssessmentPanel = () => {
+  const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,6 +36,7 @@ const AssessmentPanel = () => {
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
+        onClick={() => navigate("/avaliacoes")}
         className="w-full mt-4 py-4 rounded-2xl bg-foreground text-background font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg"
       >
         Acessar Avaliações
